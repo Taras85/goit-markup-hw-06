@@ -13,10 +13,6 @@
   --indent-nav: 50px;
   --indent-main: 30px;
   --items: 4;
-  /* --link-effect-color: color 1250ms cubic-bezier(0.4, 0, 0.2, 1); */
-  /* --link-effect-background: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1); */
-  /* --border-effect-color: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1); */
-  /* --modal-visible-form: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1); */
   --scheme-effect: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Reset */
@@ -168,7 +164,6 @@ body {
   border-radius: 2px;
   bottom: -1px;
   background-color: var(--accent-color-btn);
-
 }
 .header-contacts {
   display: flex;
@@ -302,8 +297,7 @@ body {
 }
 
 .backdrop.is-hidden .modal {
-transform: skew(-40deg, 60deg) translateX(-80%) translateY(-100%);
-
+  transform: skew(-40deg, 60deg) translateX(-80%) translateY(-100%);
 }
 
 /* Блок наші пріоритети */
@@ -499,13 +493,21 @@ transform: skew(-40deg, 60deg) translateX(-80%) translateY(-100%);
 footer {
   padding: 0;
   display: flex;
+
   background-color: var(--banner-footer-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.footer-adds {
+  width: 231px;
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-container {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 address {
@@ -541,7 +543,7 @@ address {
 .social-footer-section {
   display: flex;
   flex-direction: column;
-  margin-left: 70px;
+  /* margin-left: 70px; */
 }
 
 .social-footer-list {
@@ -549,7 +551,10 @@ address {
   align-items: center;
   gap: 10px;
 }
+
+.mailing-footer-title,
 .social-footer-title {
+  font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
@@ -583,6 +588,51 @@ address {
 .social-footer-link:focus {
   outline: none;
   background-color: var(--accent-color-btn);
+}
+
+.mailing-footer-section {
+  display: flex;
+  width: 570px;
+  /* margin-left: 89px; */
+}
+
+.mailing-footer-title {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.mailing-footer-form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.mailing_form_input {
+  display: flex;
+  padding: 15px 16px;
+  width: 358px;
+  height: 50px;
+  color: var(--background-body-color-font-baner);
+  background-color: var(--banner-footer-background-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.mailing_btn_section {
+  display: flex;
+  align-items: flex-end;
+}
+
+.mailing_form_btn {
+  margin-left: 12px;
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+  color: var(--background-body-color-font-baner);
+  background: var(--accent-color-btn);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
 }
 
 /* Галерея основна частина*/
@@ -629,10 +679,8 @@ address {
   color: var(--font-color-title-h2-h3);
   cursor: pointer;
 
-  transition: color var(--scheme-effect),
-  background-color var(--scheme-effect),
-  box-shadow var(--scheme-effect),border-radius var(--scheme-effect);
-
+  transition: color var(--scheme-effect), background-color var(--scheme-effect),
+    box-shadow var(--scheme-effect), border-radius var(--scheme-effect);
 }
 
 /* Блок галереї */
@@ -644,12 +692,12 @@ address {
   border-bottom: 1px solid var(--border-gllery-content);
 }
 
-.overlay-box{
+.overlay-box {
   position: relative;
   overflow: hidden;
 }
 
-.overlay-gallery{
+.overlay-gallery {
   position: absolute;
   top: 0;
   left: 0;
@@ -661,17 +709,16 @@ address {
   background: rgba(33, 150, 243, 0.9);
   user-select: none;
   transform: translateY(100%);
-  transition:  var(--scheme-effect);
-
+  transition: var(--scheme-effect);
 }
 
 .overlay-gallery-text {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: calc(28/18);
-    letter-spacing: 0.03em;
-  
-    color: var(--background-body-color-font-baner);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+
+  color: var(--background-body-color-font-baner);
 }
 
 .gallery-title {
@@ -691,17 +738,14 @@ address {
 .gallery-link {
   display: flex;
   flex-direction: column;
-  transition: background-color var(--scheme-effect),
-  background-color var(--scheme-effect),
-  box-shadow var(--scheme-effect) ;
-
+  transition: background-color var(--scheme-effect), background-color var(--scheme-effect),
+    box-shadow var(--scheme-effect);
 }
 
 .gallery-link:hover .overlay-gallery,
-.gallery-link:focus .overlay-gallery{
-      transform: translateY(0);
+.gallery-link:focus .overlay-gallery {
+  transform: translateY(0);
 }
-
 
 .gallery-link:focus,
 .gallery-link:hover {
@@ -709,15 +753,11 @@ address {
   background-color: var(--background-body-color-font-baner);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-
 }
-
 
 /* Анимація */
 
 @keyframes shake-top {
-
-
   0%,
   100% {
     transform: rotate(0deg);
@@ -750,17 +790,16 @@ address {
   }
 
   80% {
-  transform: rotate(-2deg);
+    transform: rotate(-2deg);
   }
 
   70%,
   50%,
   30% {
-  transform: rotate(4deg);
+    transform: rotate(4deg);
   }
 
   10% {
-  transform: rotate(2deg);
+    transform: rotate(2deg);
   }
-
 }
