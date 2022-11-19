@@ -334,6 +334,7 @@ body {
   position: relative;
   display: inline-flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .modal-fields-message:focus,
@@ -349,6 +350,7 @@ body {
   bottom: 21px;
   left: 12px;
   fill: var(--font-color-title-h2-h3);
+  transform: translateY(50%);
   transition: fill var(--scheme-effect);
 }
 
@@ -359,6 +361,7 @@ body {
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
+  
 }
 .modal-fields-input {
   font-weight: 400;
@@ -371,7 +374,7 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 42px;
-  margin-bottom: 10px;
+  
   transition: border-color var(--scheme-effect);
 }
 
@@ -429,7 +432,6 @@ body {
   display: flex;
   align-items: center;
   user-select: none;
-
   gap: 8px;
 }
 
@@ -750,6 +752,7 @@ address {
 .mailing-footer-form {
   display: flex;
   align-items: flex-end;
+  gap: 12px;
 }
 
 .mailing_form_input {
@@ -770,7 +773,7 @@ address {
 
 .mailing_form_btn {
   position: relative;
-  margin-left: 12px;
+  /* margin-left: 12px; */
   width: 200px;
   height: 50px;
   padding: 10px 28px;
